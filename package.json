@@ -1,0 +1,46 @@
+{
+  "name": "bullet",
+  "version": "0.1.0",
+  "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (http://pksunkara.github.com)",
+  "description": "Very simple MVC over express",
+  "main": "./lib/bullet",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pksunkara/bullet.git"
+  },
+  "keywords": [
+    "bullet",
+    "express",
+    "mvc",
+    "simple",
+    "rails"
+  ],
+  "homepage": "http://pksunkara.github.com/bullet",
+  "scripts": {
+    "test": "./node_modules/.bin/vows --spec test"
+  },
+  "contributors": [
+    {
+      "name": "Pavan Kumar Sunkara",
+      "email": "pavan.sss1991@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "director": "1.0.x"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "engines": {
+    "node": ">0.6.x"
+  },
+  "bugs": {
+    "url": "https://github.com/pksunkara/bullet/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/pksunkara/bullet/raw/master/LICENSE"
+    }
+  ]
+}
