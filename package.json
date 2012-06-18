@@ -2,7 +2,7 @@
   "name": "bullet",
   "version": "0.1.0",
   "author": "Pavan Kumar Sunkara <pavan.sss1991@gmail.com> (http://pksunkara.github.com)",
-  "description": "Very simple MVC over express",
+  "description": "A simple lightweight MVC with express",
   "main": "./lib/bullet",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   ],
   "homepage": "http://pksunkara.github.com/bullet",
   "scripts": {
-    "test": "./node_modules/.bin/vows --spec test"
+    "test": "./node_modules/.bin/vows --spec test/*"
   },
   "contributors": [
     {
@@ -27,11 +27,13 @@
   ],
   "dependencies": {
     "async": "0.1.x",
-    "nconf": "0.6.x",
+    "nconf": "0.5.x",
     "resourceful": "0.1.x",
     "director": "1.0.x"
   },
   "devDependencies": {
+    "api-easy": "0.3.x",
+    "express": "3.0.0beta3",
     "vows": "0.6.x"
   },
   "engines": {
