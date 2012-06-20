@@ -4,9 +4,12 @@
  */
 
 var express = require('express')
+  , bullet = require('../../lib/bullet')
   , http = require('http');
 
 var app = express();
+
+bullet(app, __dirname);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
