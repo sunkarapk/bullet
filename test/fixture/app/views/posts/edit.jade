@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  .page-header
+    h1
+      | Edit Post
+      span.pull-right
+        a.btn.btn-inverse(href='/posts') Back
+  - up = true
+  include form

@@ -9,11 +9,11 @@ var express = require('express')
 
 var app = express();
 
-bullet(app, __dirname);
+bullet.init(app, __dirname);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/views');
+  app.set('views', __dirname + '/app/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));

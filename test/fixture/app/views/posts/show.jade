@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  .page-header
+    h1
+      | Post
+      span.pull-right
+        a.btn.btn-inverse(href='/posts') Back
+        | &nbsp;
+        a.btn(href='/posts/#{post.id}/edit') Edit
+        | &nbsp;
+        a.btn.btn-danger(href='/posts') Destroy
+  table.table.table-bordered.table-striped
+    tbody
+      tr
+        td
+          strong Name
+        td= post.name
+      tr
+        td
+          strong Title
+        td= post.title
+      tr
+        td
+          strong Content
+        td= post.content

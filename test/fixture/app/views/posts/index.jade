@@ -1,0 +1,29 @@
+extends ../layout
+
+block content
+  .page-header
+    h1
+      | Posts
+      span.pull-right
+        a.btn.btn-primary(href='/posts/new') New
+  table.table.table-striped
+    thead
+      tr
+        th Name
+        th Title
+        th Content
+        th
+        th
+        th
+    tbody
+      each post in posts
+        tr
+          td= post.name
+          td= post.title
+          td= post.content
+          td.actions
+            a.btn.btn-mini.btn-primary(href='/posts/#{post.id}') Show
+          td.actions
+            a.btn.btn-mini(href='/posts/#{post.id}/edit') Edit
+          td.actions
+            a.btn.btn-mini.btn-danger(href='#') Destroy

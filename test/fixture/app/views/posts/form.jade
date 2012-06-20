@@ -1,0 +1,18 @@
+form.form-horizontal(method="POST", action='/posts' + (up?"/"+post.id:""))
+  fieldset
+   .control-group
+      label.control-label(for='post_name') Name
+      .controls
+        input.input-xlarge#post_name(type='text', name='post[name]', value=(post.name?post.name:''))
+    .control-group
+      label.control-label(for='post_title') Title
+      .controls
+        input.input-xlarge#post_title(type='text', name='post[title]', value=(post.title?post.title:''))
+    .control-group
+      label.control-label(for='post_content') Content
+      .controls
+        textarea.input-xxlarge#post_content(name='post[content]', rows='10')= (post.content?post.content:'')
+    .form-actions
+      button.btn.btn-primary(type='submit')= (up?"Edit":"Create") + ' post'
+      | &nbsp;
+      button.btn.btn-danger(type='reset') Cancel
