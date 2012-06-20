@@ -17,7 +17,7 @@
   ],
   "homepage": "http://pksunkara.github.com/bullet",
   "scripts": {
-    "test": "./node_modules/.bin/vows --spec test/*"
+    "test": "./node_modules/.bin/vows --spec $(find test -type f -name *-test.js)"
   },
   "contributors": [
     {
