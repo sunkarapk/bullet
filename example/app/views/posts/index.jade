@@ -5,7 +5,7 @@ block content
     h1
       | Posts
       span.pull-right
-        a.btn.btn-primary(href='/posts/new') New
+        a.btn.btn-primary(href=r.new_post_path) New
   table.table.table-striped
     thead
       tr
@@ -22,8 +22,8 @@ block content
           td= post.title
           td= post.content
           td.actions
-            a.btn.btn-mini.btn-primary(href='/posts/#{post.id}') Show
+            a.btn.btn-mini.btn-primary(href=r.post_path(post.id)) Show
           td.actions
-            a.btn.btn-mini(href='/posts/#{post.id}/edit') Edit
+            a.btn.btn-mini(href=r.edit_post_path(post.id)) Edit
           td.actions
             a.btn.btn-mini.btn-danger(href='#') Destroy

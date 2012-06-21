@@ -5,11 +5,11 @@ block content
     h1
       | Post
       span.pull-right
-        a.btn.btn-inverse(href='/posts') Back
+        a.btn.btn-inverse(href=r.posts_path) Back
         | &nbsp;
-        a.btn(href='/posts/#{post.id}/edit') Edit
+        a.btn(href=r.edit_post_path(post.id)) Edit
         | &nbsp;
-        a.btn.btn-danger(href='/posts') Destroy
+        a.btn.btn-danger(href='#') Destroy
   table.table.table-bordered.table-striped
     tbody
       tr

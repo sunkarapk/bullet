@@ -1,4 +1,8 @@
-form.form-horizontal(method="POST", action='/posts' + (up?"/"+post.id:""))
+if up
+  - act = r.post_path(post.id)
+else
+  - act = r.posts_path
+form.form-horizontal(method="POST", action=act)
   fieldset
    .control-group
       label.control-label(for='post_name') Name
