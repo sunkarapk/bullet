@@ -9,7 +9,7 @@ block content
         | &nbsp;
         a.btn(href=r.edit_post_path(post.id)) Edit
         | &nbsp;
-        a.btn.btn-danger(href='#') Destroy
+        a.btn.btn-danger.apiDestroy(href=r.post_path(post.id)) Destroy
   table.table.table-bordered.table-striped
     tbody
       tr

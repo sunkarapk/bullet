@@ -26,4 +26,4 @@ block content
           td.actions
             a.btn.btn-mini(href=r.edit_post_path(post.id)) Edit
           td.actions
-            a.btn.btn-mini.btn-danger(href='#') Destroy
+            a.btn.btn-mini.btn-danger.apiDestroy(href=r.post_path(post.id)) Destroy
