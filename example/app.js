@@ -4,7 +4,7 @@
  */
 
 var express = require('express')
-  , bullet = require('../../lib/bullet')
+  , bullet = require('../lib/bullet')
   , http = require('http');
 
 var app = express();
