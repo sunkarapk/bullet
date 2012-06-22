@@ -23,9 +23,9 @@ module.exports = {
 
     post.save(function (err, data) {
       if (err) {
-        self.res.render('posts/new', {post: post, errs: err});
+        self.res.render('posts/new', {post: post, errs: err.validate.errors});
       } else {
-        self.res.redirect('/posts/' + data.id);
+        self.res.redirect(app.r.post_path(data.id));
       }
     });
   },
@@ -43,10 +43,9 @@ module.exports = {
 
     this.post.update(this.req.body.post, function (err, data) {
       if (err) {
-        console.log(err.validate.errors);
-        self.res.render('posts/edit', {post: post, errs: err});
+        self.res.render('posts/edit', {post: self.post, errs: err.validate.errors});
       } else {
-        self.res.redirect('/posts/' + data.id);
+        self.res.redirect(app.r.post_path(data.id));
       }
     });
   },
@@ -66,7 +65,7 @@ module.exports = {
     var self = this;
     app.m.Post.get(args[0], function (err, data) {
       if (err) {
-        self.res.redirect('/posts');
+        self.res.redirect(app.r.posts_path);
       } else {
         self.post = data; cb();
       }

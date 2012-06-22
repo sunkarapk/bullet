@@ -1,6 +1,9 @@
 module.exports = function () {
 
-  this.string('name', { required: true });
+  this.string('name', {
+    required: true,
+    minLength: 5
+  });
 
   this.string('title', {
     required: true,
