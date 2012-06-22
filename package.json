@@ -26,7 +26,7 @@
     }
   ],
   "dependencies": {
-    "async": "0.1.x",
+    "utile": "0.1.x",
     "nconf": "0.5.x",
     "resourceful": "0.1.x",
     "director": "1.0.x"

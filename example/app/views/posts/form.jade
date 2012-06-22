@@ -1,22 +1,10 @@
 - up = !post.isNewRecord
-if up
-  - act = r.post_path(post.id)
-else
-  - act = r.posts_path
-form.form-horizontal(method="POST", action=act)
+- f = form(post, 'post')
+form.form-horizontal(method="POST", action=(up?r.post_path(post.id):r.posts_path))
   fieldset
-   .control-group
-      label.control-label(for='post_name') Name
-      .controls
-        input.input-xlarge#post_name(type='text', name='post[name]', value=(post.name?post.name:''))
-    .control-group
-      label.control-label(for='post_title') Title
-      .controls
-        input.input-xlarge#post_title(type='text', name='post[title]', value=(post.title?post.title:''))
-    .control-group
-      label.control-label(for='post_content') Content
-      .controls
-        textarea.input-xxlarge#post_content(name='post[content]', rows='10')= (post.content?post.content:'')
+    | !{f.text('name', errs.name)}
+    | !{f.text('title', errs.title)}
+    | !{f.textarea('content', errs.content)}
     .form-actions
       button.btn.btn-primary(type='submit')= (up?"Edit":"Create") + ' post'
       | &nbsp;
