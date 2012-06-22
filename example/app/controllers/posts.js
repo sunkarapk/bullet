@@ -23,7 +23,7 @@ module.exports = {
 
     post.save(function (err, data) {
       if (err) {
-        self.res.render('posts/new', {post: post, errs: app.modErr(err)});
+        self.res.render('posts/new', {post: post, errs: err});
       } else {
         self.res.redirect(app.r.post_path(data.id));
       }
@@ -44,7 +44,7 @@ module.exports = {
     this.post.update(this.req.body.post, function (err, data) {
       if (err) {
         self.req.body.post.isNewRecord = false;
-        self.res.render('posts/edit', {post: self.req.body.post, errs: app.modErr(err)});
+        self.res.render('posts/edit', {post: self.req.body.post, errs: err});
       } else {
         self.res.redirect(app.r.post_path(data.id));
       }

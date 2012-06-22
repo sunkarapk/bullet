@@ -1,10 +1,10 @@
 - up = !post.isNewRecord
-- f = form(post, 'post')
+- f = form(post, 'post', errs)
 form.form-horizontal(method="POST", action=(up?r.post_path(post.id):r.posts_path))
   fieldset
-    | !{f.text('name', errs.name)}
-    | !{f.text('title', errs.title)}
-    | !{f.textarea('content', errs.content)}
+    | !{f.text('name')}
+    | !{f.text('title')}
+    | !{f.textarea('content')}
     .form-actions
       button.btn.btn-primary(type='submit')= (up?"Edit":"Create") + ' post'
       | &nbsp;
