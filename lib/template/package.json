@@ -1,13 +1,16 @@
 {
-  "name": "application-name",
+  "name": "bullet",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.0beta3",
-    "jade": "*",
+    "express": "3.0.x",
+    "jade": "0.x.x",
     "bullet": "0.1.x"
+  },
+  "engines": {
+    "node": "0.8.x"
   }
 }

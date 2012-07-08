@@ -26,6 +26,7 @@
     }
   ],
   "dependencies": {
+    "connect": "2.3.x",
     "utile": "0.1.x",
     "nconf": "0.6.x",
     "resourceful": "0.3.x",

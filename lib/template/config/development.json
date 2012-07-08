@@ -1,11 +1,17 @@
 {
-  "secret": "bullletsecret",
   "cache": {
-    "maxAge": 31536000000
+    "maxAge": 0
   },
   "db": {
     "host": "localhost",
     "port": 5984,
     "database": "bullet"
+  },
+  "session": {
+    "key": "bullet.sid",
+    "secret": "bullletsecret",
+    "cookie": {
+      "maxAge": 31536000000
+    }
   }
 }
