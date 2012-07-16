@@ -17,13 +17,14 @@ app.configure(function(){
   app.set('view engine', 'jade');
 
   app.use(express.favicon(app.favicon, app.config.get('cache')));
+  app.use(express.static(app.static, app.config.get('cache')));
   app.use(express.responseTime());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(express.session(app.session));
+  app.use(app.helpers);
   app.use(app.router);
-  app.use(express.static(app.static, app.config.get('cache')));
 });
 
 app.configure('development', function(){
