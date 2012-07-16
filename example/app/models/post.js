@@ -14,16 +14,18 @@ module.exports = function () {
 
   this.timestamps();
 
-  this.filter('all', { include_docs: true }, {
+  this.filter('all', {
     map: function (doc) {
       if (doc.resource === 'Post') {
-        emit(doc._id, { _id: doc._id });
+        var x = doc._id;
+        doc._id = doc._id.split('/').slice(1).join('/');
+        emit(x, doc);
       }
     }
   });
 
   this.before('save', function (obj) {
-    obj._id = obj.title;
+    obj.id = obj.title;
     return true;
   });
 };
