@@ -23,6 +23,12 @@ html
           a.brand(href='/') bullet
           .nav-collapse
     .container-fluid
+      - if (flash)
+        .row-fluid
+          .span14
+            .alert(class='alert-#{flash.type}')
+              a.close(href='#', data-dismiss='alert') ×
+              = flash.msg
       .row-fluid
         .span14
           block content

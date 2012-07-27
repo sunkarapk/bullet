@@ -9,12 +9,12 @@ module.exports = {
     var self = this;
     app.m.Post.all(function (err, posts) {
       if (err) throw err;
-      self.res.render('posts/index', {posts: posts});
+      self.res.render('posts/index', { posts: posts });
     });
   },
 
   new: function () {
-    this.res.render('posts/new', {post: app.m.Post.new({}), errs: {}});
+    this.res.render('posts/new', { post: app.m.Post.new({}) });
   },
 
   create: function () {
@@ -23,7 +23,7 @@ module.exports = {
 
     post.save(function (err, data) {
       if (err) {
-        self.res.render('posts/new', {post: post, errs: err});
+        self.res.render('posts/new', { post: post, errs: err });
       } else {
         self.res.redirect(app.r.post_path(data.id));
       }
@@ -31,11 +31,11 @@ module.exports = {
   },
 
   show: function (id) {
-    this.res.render('posts/show', {post: this.post});
+    this.res.render('posts/show', { post: this.post });
   },
 
   edit: function (id) {
-    this.res.render('posts/edit', {post: this.post, errs: {}});
+    this.res.render('posts/edit', { post: this.post });
   },
 
   update: function (id) {
@@ -44,7 +44,7 @@ module.exports = {
     this.post.update(this.req.body.post, function (err, data) {
       if (err) {
         self.req.body.post.isNewRecord = false;
-        self.res.render('posts/edit', {post: self.req.body.post, errs: err});
+        self.res.render('posts/edit', { post: self.req.body.post, errs: err });
       } else {
         self.res.redirect(app.r.post_path(data.id));
       }
