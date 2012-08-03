@@ -17,9 +17,7 @@ module.exports = function () {
   this.filter('all', {
     map: function (doc) {
       if (doc.resource === 'Post') {
-        var x = doc._id;
-        doc._id = doc._id.split('/').slice(1).join('/');
-        emit(x, doc);
+        emit(doc._id, doc);
       }
     }
   });
