@@ -13,7 +13,7 @@ html
     script(type='text/javascript', src='/js/application.js')
 
   body
-    .navbar.navbar-fixed-top
+    .navbar.navbar-fixed-top.navbar-inverse
       .navbar-inner
         .container-fluid
           a.btn.btn-navbar(data-toggle='collapse', data-target='nav-collapse')
@@ -25,12 +25,12 @@ html
     .container-fluid
       - if (flash)
         .row-fluid
-          .span14
+          .span12
             .alert(class='alert-#{flash.type}')
               a.close(href='#', data-dismiss='alert') ×
               = flash.msg
       .row-fluid
-        .span14
+        .span12
           block content
       hr
       footer
