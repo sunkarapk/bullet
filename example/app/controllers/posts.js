@@ -46,6 +46,9 @@ module.exports = {
         self.req.body.post.isNewRecord = false;
         self.res.render('posts/edit', { post: self.req.body.post, errs: err });
       } else {
+        self.req.flash("success", 'Updated!')
+        self.req.flash("info", 'Hey, there are multiple messages!')
+        self.req.flash("An example")
         self.res.redirect(app.r.post_path(data.id));
       }
     });
