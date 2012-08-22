@@ -24,11 +24,12 @@ html
           .nav-collapse
     .container-fluid
       - if (flash)
-        .row-fluid
-          .span12
-            .alert(class='alert-#{flash.type}')
-              a.close(href='#', data-dismiss='alert') ×
-              = flash.msg
+        each fl in flash
+          .row-fluid
+            .span12
+              .alert(class='alert-#{fl.type}')
+                a.close(href='#', data-dismiss='alert') ×
+                = fl.msg
       .row-fluid
         .span12
           block content
