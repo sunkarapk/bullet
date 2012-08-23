@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/pksunkara/bullet.png)](http://travis-ci.org/pksunkara/bullet)
 # bullet
 
 bullet is a very simple and lightweight MVC over [express](http://expressjs.com)
