@@ -6,7 +6,7 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.x",
+    "express": "3.1.x",
     "jade": "0.x.x",
     "bullet": "0.1.x"
   },

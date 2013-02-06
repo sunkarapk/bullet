@@ -26,20 +26,18 @@
     }
   ],
   "dependencies": {
-    "connect": "2.4.x",
+    "connect": "2.7.x",
     "utile": "0.1.x",
     "nconf": "0.6.x",
     "resourceful": "0.3.x",
     "director": "1.1.x"
   },
   "devDependencies": {
-    "api-easy": "0.3.x",
-    "express": "3.0.x",
-    "jade": "*",
-    "vows": "0.6.x"
+    "express": "3.1.x",
+    "jade": "0.x.x"
   },
   "engines": {
-    "node": ">0.6.x"
+    "node": "> 0.8.x"
   },
   "bugs": {
     "url": "https://github.com/pksunkara/bullet/issues"
